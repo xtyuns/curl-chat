@@ -74,6 +74,9 @@ export default {
                     }
                 } catch (e) {
                     console.error(new Date(), 'Fetch Error', e);
+                    if(signal.aborted) {
+                        return
+                    }
                     controller.enqueue("\nSomething went wrong\n");
                 }
 

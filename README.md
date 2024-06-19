@@ -25,3 +25,10 @@ bun run dev
 ```bash
 curl -d 'who are you' 127.0.0.1:3000
 ```
+
+或者在 `~/.bashrc` 中追加配置内容:
+```bash
+# curl-chat
+alias ai='ask_ai() { curl -d "$*" 127.0.0.1:3000; }; ask_ai'
+```
+然后重启终端, 就可以使用 `ai who are you` 来实现调用
